@@ -4,10 +4,11 @@
   <head>
     <title>Lambda School Newsfeed</title>
     <link rel="stylesheet" type="text/css" media="screen" href="./CSS/index.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="./Menu/Menu.js" async></script>
     <script src="./Article/Article.js" async></script>
   </head>
-  <body>
+  <input>
     <div class="header">
       <img class="menu-button" src="./assets/menu.png"/>
       <h1>Lambda School Newsfeed</h1>
@@ -44,8 +45,7 @@
         naboo ackbar tatooine. Hutt lars padmé darth. Maul solo darth darth jabba qui-gon chewbacca darth maul. Moff baba wicket
         han. C-3po antilles moff qui-gon ahsoka aayla dooku amidala. Palpatine droid amidala droid k-3po twi'lek padmé wookiee. Leia
         moff calamari mon obi-wan. Solo grievous lando coruscant. Jinn darth palpatine obi-wan mon.</p>
-        <span class='expandButton'>asd</span>
-        <span class="closeButton">asdsa</span>
+        <span class='expandButton'></span>
       </div>
       <div class="article">
         <h2>Javascript and You, ES6</h2>
@@ -159,5 +159,14 @@
         <span class='expandButton'></span>
       </div>
     </div>
+    <form>
+      Title of Article:<br>
+      <input type="text" id="title">
+      <br>
+      Article Content:<br>
+      <input type="text" id="article">
+      <br><br>
+      <button type="button" id="submit">Submit</button>
+    </form> 
   </body>
 </html>

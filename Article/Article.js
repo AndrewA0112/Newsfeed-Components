@@ -18,7 +18,7 @@ class Article {
     if(this.expandButton.textContent === 'Open')
       this.expandButton.textContent = 'Close';
     else
-      this.expandButton.textContent = 'Open';
+      this.expandButton.textContent = 'Open'
   }
 }
 
@@ -34,3 +34,36 @@ a new instance of Article by passing in each article as a parameter to the Artic
 let articles =  document.querySelectorAll('.article');
 articles.forEach(article => new Article(article));
 console.log('articles', articles);
+
+
+let createArticle = (title, article) => {
+  var articleDiv = document.createElement('div');
+  articleDiv.classList.add('article');
+  var articleTitle = document.createElement('h2');
+  articleTitle.textContent = title;
+  articleDiv.appendChild(articleTitle);
+  var articleDate = document.createElement('p');
+  articleDate.classList.add('date');
+  articleDate.textContent = 'Nov 7th, 2017'
+  articleDiv.appendChild(articleDate);
+  var articleContent = document.createElement('p');
+  articleContent.textContent = article;
+  articleDiv.appendChild(articleContent);
+  var articleButton = document.createElement('span');
+  articleButton.classList.add('expandButton');
+  articleDiv.appendChild(articleButton);
+
+  console.log(articleDiv)
+  document.querySelector('.articles').appendChild(articleDiv);
+  new Article(articleDiv);
+}
+
+
+let submit = document.querySelector('#submit');
+console.log('submit', submit);
+
+submit.addEventListener('click', function()  {
+  let title = document.querySelector('#title').value;
+  let article = document.querySelector('#article').value;
+  createArticle(title,article)
+})

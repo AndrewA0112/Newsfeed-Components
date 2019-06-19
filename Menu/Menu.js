@@ -1,6 +1,7 @@
 
 const toggleMenu = () => {
-  // Toggle the "menu--open" class on your menu refence. 
+  // Toggle the "menu--open" class on your menu refence.
+  menu.style.transition = '5s';
   menu.classList.toggle('menu--open');
 }
 
