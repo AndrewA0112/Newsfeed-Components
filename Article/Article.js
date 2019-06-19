@@ -35,7 +35,6 @@ let articles =  document.querySelectorAll('.article');
 articles.forEach(article => new Article(article));
 console.log('articles', articles);
 
-
 let createArticle = (title, article) => {
   var articleDiv = document.createElement('div');
   articleDiv.classList.add('article');
@@ -53,14 +52,18 @@ let createArticle = (title, article) => {
   articleButton.classList.add('expandButton');
   articleDiv.appendChild(articleButton);
 
-  console.log(articleDiv)
   document.querySelector('.articles').appendChild(articleDiv);
-  new Article(articleDiv);
+  // let newArticles = document.querySelectorAll('.article');
+  // newArticles.forEach(article => new Article(article))
+  // console.log(newArticles);
+
+  articles = document.querySelectorAll('.article');
+  articles.forEach(article => new Article(article))
+  console.log(articles);
 }
 
 
 let submit = document.querySelector('#submit');
-console.log('submit', submit);
 
 submit.addEventListener('click', function()  {
   let title = document.querySelector('#title').value;
