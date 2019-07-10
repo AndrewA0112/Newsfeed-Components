@@ -53,10 +53,6 @@ let createArticle = (title, article) => {
   articleDiv.appendChild(articleButton);
 
   document.querySelector('.articles').appendChild(articleDiv);
-  // let newArticles = document.querySelectorAll('.article');
-  // newArticles.forEach(article => new Article(article))
-  // console.log(newArticles);
-
   articles = document.querySelectorAll('.article');
   articles.forEach(article => new Article(article))
   console.log(articles);
