@@ -127,6 +127,17 @@ const articles = document.querySelector('.articles')
 data.forEach(data => {
   articles.appendChild(createArticle(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph))
 })
+
+let submit = document.querySelector('#submit');
+
+submit.addEventListener('click', function()  {
+  let title = document.querySelector('#title').value;
+  let date = document.querySelector('#date').value;
+  let firstParagraph = document.querySelector('#paraOne').value;
+  let secondParagraph = document.querySelector('#paraTwo').value;
+  let thirdParagraph = document.querySelector('#paraThree').value;
+  articles.appendChild(createArticle(title,date,firstParagraph,secondParagraph,thirdParagraph))
+})
   
 function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
 

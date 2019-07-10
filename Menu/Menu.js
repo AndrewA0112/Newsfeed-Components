@@ -26,8 +26,9 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
+document.querySelector('body').appendChild(createMenu(menuItems))
 
-function createMenu(array) {
+function createMenu(arr) {
 
   const menu = document.createElement('div');
   const list = document.createElement('ul')
@@ -36,7 +37,7 @@ function createMenu(array) {
 
   menu.appendChild(list);
 
-  array.forEach(item => {
+  arr.forEach(item => {
     const listItem = document.createElement('li')
     listItem.textContent = item;
     list.appendChild(listItem)
